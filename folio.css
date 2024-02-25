@@ -60,12 +60,22 @@ body {
 .about-me {
     padding: 20px;
     background-color: rgba(4, 7, 32, 0.9);
-    border-radius: 1px;
-    text-align: left;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
-/* Section Title and Content Styles */
+.about-me .profile-image {
+    flex: 0 0 150px; 
+    margin-right: 40px; 
+    border-radius: 50%; 
+    overflow: hidden;
+}
+
+.about-me .content {
+    flex: 1;
+}
+
 .section-title {
     font-size: 2rem;
     font-weight: bold;
@@ -73,11 +83,24 @@ body {
 }
 
 .section-content {
-    margin-top: 24px;
-    font-size: 1rem;
+    margin-top: 16px;
     font-weight: 300;
     line-height: 1.6;
     color: #fff;
+}
+
+/* Image Styles */
+.image {
+    width: 100%;
+    max-width: 400px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.image img {
+    width: 100%;
+    height: auto; /* Maintain the aspect ratio of the image */
+    border-radius: 8px; /* Add rounded corners if desired */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
 
 /* Skills, Experience, Education Styles */
