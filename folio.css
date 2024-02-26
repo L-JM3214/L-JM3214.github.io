@@ -56,51 +56,73 @@ body {
     }
 }
 
-/* About Me Section */
+/* About Me Container Styles */
 .about-me {
-    padding: 20px;
-    background-color: rgba(4, 7, 32, 0.9);
-    text-align: center;
-    display: flex;
-    align-items: center;
+    overflow: hidden; 
 }
 
-.about-me .profile-image {
-    flex: 0 0 150px; 
-    margin-right: 40px; 
-    border-radius: 50%; 
-    overflow: hidden;
+.about-me section {
+    width: 90%; 
 }
 
-.about-me .content {
-    flex: 1;
-}
-
-.section-title {
+.about-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #fff;
+    color: #070707;
 }
 
-.section-content {
-    margin-top: 16px;
-    font-weight: 300;
-    line-height: 1.6;
-    color: #fff;
+.personal-introduction {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    font-size: 18px; /* taken from CSS A */
+    font-weight: 600; /* taken from CSS A */
+    line-height: 1.5; /* taken from CSS A */
+    color: #020202; /* taken from CSS A */
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 /* Image Styles */
-.image {
-    width: 100%;
-    max-width: 400px; /* Adjust the max-width as needed */
-    margin: 0 auto; /* Center the image horizontally */
+.image-container {
+    float: left; 
+    margin-right: 20px;
+    margin-left: 100px;
 }
 
-.image img {
-    width: 100%;
-    height: auto; /* Maintain the aspect ratio of the image */
-    border-radius: 8px; /* Add rounded corners if desired */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+.image-container img {
+    aspect-ratio: 0.75;
+    object-fit: cover;
+    object-position: center;
+    width: 1000%;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    position: relative;
+    border-radius: 20px;
+    height: auto;
+    margin-right: 5px; /* Add margin to the right to create space between image and content */
+    overflow: hidden;
+    transform-origin: center center;
+    animation: scaleImage 2s infinite alternate;
+}
+@keyframes scaleImage {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1); /* Adjust the scaling factor as desired */
+    }
 }
 
 /* Skills, Experience, Education Styles */
