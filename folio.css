@@ -78,11 +78,12 @@ body {
     width: 100%;
     max-width: 1200px;
     gap: 20px;
-    font-size: 18px; /* taken from CSS A */
-    font-weight: 600; /* taken from CSS A */
-    line-height: 1.5; /* taken from CSS A */
-    color: #020202; /* taken from CSS A */
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #020202;
 }
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -92,6 +93,53 @@ body {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+/* Common Styles for Sections (Skills, Experience, Education) */
+.skills-section,
+.experience-section,
+.education-section {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+/* List Styles for Skills, Experience, Education */
+.skill-list,
+.experience-list,
+.education-list {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Highlight Styles for Skills, Experience, Education */
+.skill-highlight,
+.experience-highlight,
+.education-highlight {
+    font-weight: 300;
+}
+
+/* Title Styles for Skills, Experience, Education */
+.skills-title,
+.experience-title,
+.education-title {
+    font-size: 2rem;
+    color: #050505;
+    font-weight: 300;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+/* Horizontal Rule Styles */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #f9004d;
+    margin-top: 10px;
+}
+
+/* Highlighted Text Color */
+.highlight {
+    color: #f9004d;
 }
 
 /* Image Styles */
