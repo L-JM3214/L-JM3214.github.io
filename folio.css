@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
+    background-color: #000;
 }
 
 /* Container Styles */
@@ -56,32 +57,33 @@ body {
     }
 }
 
-/* About Me Container Styles */
+/* About Me */
 .about-me {
     overflow: hidden; 
 }
 
 .about-me section {
-    width: 90%; 
+    width: 100%; 
 }
 
 .about-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #070707;
+    color: #fff;
 }
 
 .personal-introduction {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 10px;
     width: 100%;
     max-width: 1200px;
     gap: 20px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.5;
-    color: #020202;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 .visually-hidden {
@@ -95,38 +97,59 @@ body {
     border: 0;
 }
 
-/* Common Styles for Sections (Skills, Experience, Education) */
+/* Skills, Experience, Education */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .skills-section,
 .experience-section,
 .education-section {
     flex: 1;
     margin-bottom: 20px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    background-color: #1a0000; 
+    border: 2px solid #1a0000; 
+    border-radius: 20px; /
+    overflow: hidden; 
+    padding: 20px; 
 }
 
-/* List Styles for Skills, Experience, Education */
+/* Title Styles */
+.skills-title,
+.experience-title,
+.education-title {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px; /* Adjust margin for spacing */
+}
+
+/* List Styles */
 .skill-list,
 .experience-list,
 .education-list {
     font-size: 18px;
     line-height: 1.5;
+    color: #fff;
+    list-style-type: none; /* Remove default list styles */
 }
 
-/* Highlight Styles for Skills, Experience, Education */
+/* Item Styles */
+.skill-list li,
+.experience-list li,
+.education-list li {
+    margin-bottom: 15px; /* Adjust margin for spacing between items */
+}
+
+/* Highlight Styles */
 .skill-highlight,
 .experience-highlight,
 .education-highlight {
     font-weight: 300;
-}
-
-/* Title Styles for Skills, Experience, Education */
-.skills-title,
-.experience-title,
-.education-title {
-    font-size: 2rem;
-    color: #050505;
-    font-weight: 300;
-    line-height: 1.2;
-    font-weight: bold;
 }
 
 /* Horizontal Rule Styles */
@@ -142,59 +165,52 @@ hr {
     color: #f9004d;
 }
 
+
+
 /* Image Styles */
 .image-container {
     float: left; 
     margin-right: 20px;
-    margin-left: 100px;
+    margin-left: 20px;
 }
 
 .image-container img {
     aspect-ratio: 0.75;
     object-fit: cover;
     object-position: center;
-    width: 1000%;
+    width: 2000%;
     box-shadow: 0 25px 65px rgba(0, 0, 0, 0.1);
     max-width: 350px;
     position: relative;
     border-radius: 20px;
     height: auto;
-    margin-right: 5px; /* Add margin to the right to create space between image and content */
+    margin-right: 5px; 
     overflow: hidden;
     transform-origin: center center;
     animation: scaleImage 2s infinite alternate;
 }
+
 @keyframes scaleImage {
     0% {
         transform: scale(1);
     }
     100% {
-        transform: scale(1.1); /* Adjust the scaling factor as desired */
+        transform: scale(1.1); 
     }
 }
 
-/* Skills, Experience, Education Styles */
-.skills, .experience, .education {
-    margin-top: 24px;
+/* Stack icon  */
+.icon-container .icon {
+    width: 65px;
+    height: 65px;
+}
+
+.icon-container {
     display: flex;
-    flex-direction: column;
+    gap: 5px;
+    margin-top: 150px;
 }
 
-.highlight {
-    color: #f9004d;
-    font-weight: bold;
-}
-
-.highlight-bar {
-    background-color: #f9004d;
-    height: 2px;
-    margin-top: 8px;
-}
-
-.skillset, .work-experience, .academic-credentials {
-    margin-top: 24px;
-    font-weight: 300;
-}
 
 /* Navbar */
 .profile-image {
