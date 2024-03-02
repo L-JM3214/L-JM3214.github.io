@@ -268,3 +268,223 @@ nav a:hover {
         transform: translateX(-50%) translateY(10px);
     }
 }
+
+/*Projects Container*/
+/* Projects Container */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .projects-header {
+    color: #fff;
+    text-align: center;
+    font: 700 60px/141% Poppins, sans-serif;
+  }
+  
+  .projects-description {
+    color: rgba(198, 201, 216, 0.75);
+    text-align: center;
+    margin-top: 21px;
+    font: 300 18px/167% Poppins, sans-serif;
+  }
+  
+  .projects-grid,
+  .projects-row {
+    align-self: stretch;
+    margin-top: 75px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 0.65;
+    font-size: 14px;
+    color: #0a0a0a;
+    font-weight: 400;
+    text-align: center;
+    padding: 45px 68px;
+    cursor: pointer;
+    transition: transform 0.5s; /* Add a transition for a smooth flip effect */
+  }
+  
+  .project-card:hover {
+    transform: rotateY(180deg); /* Rotate the card on hover */
+  }
+  
+  .project-card:hover .project-details {
+    transform: rotateY(180deg); /* Rotate the details container on hover */
+  }
+  
+  .project-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .project-title,
+  .project-technology {
+    position: relative;
+    color: #c6c9d8;
+    font-family: Poppins, sans-serif;
+    line-height: 214%;
+    margin-top: 328px;
+  }
+  
+  .project-description {
+    position: relative;
+    margin-top: 33px;
+    font: 600 24px/36px Poppins, sans-serif;
+  }
+  
+  .view-details,
+  .view-more {
+    position: relative;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin-top: 45px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    line-height: 243%;
+    padding: 15px 26px;
+  }
+  
+  .view-more {
+    border: 2px solid #f9004d;
+    background-color: #f9004d;
+    color: #fff;
+    padding: 25px 44px;
+  }
+  
+  /* Projects Details Container - Hidden by default */
+  .project-details {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg); /* Initially rotate details container to the back of the card */
+    backface-visibility: hidden; /* Hide the backface to prevent flickering during rotation */
+  }
+  
+  @media (max-width: 991px) {
+    .projects-header {
+      font-size: 40px;
+    }
+  
+    .projects-description,
+    .project-title,
+    .project-technology,
+    .view-details,
+    .view-more {
+      white-space: initial;
+    }
+  
+    .projects-grid,
+    .projects-row,
+    .project-card {
+      max-width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 0 20px;
+      margin-top: 30px;
+    }
+  }
+  
+
+ /* Contact Form */
+.contact-container {
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    font-size: 15px;
+    color: #f5f1f1;
+    font-weight: 400;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #1a0000; 
+    border-radius: 10px; 
+  }
+  
+  .contact-title {
+    color: #f1f0f0; 
+    width: 100%;
+    font: 700 40px/141% "Poppins", sans-serif; 
+  }
+  
+  .contact-intro {
+    color: #666; 
+    margin-top: 20px; 
+    width: 100%;
+    font: 18px/167% "Poppins", sans-serif;
+  }
+  
+  .contact-label {
+    font-family: "Liberation Sans", sans-serif;
+    margin-top: 20px;
+    padding: 15px; 
+    border: 2px solid #e6dbdb; 
+    border-radius: 5px;
+    background-color: #1a0000;
+  }
+  
+  .contact-submit {
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    border: 2px solid #f9004d;
+    background-color: #f9004d;
+    align-self: start;
+    margin-top: 20px; 
+    color: #e6e0e0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 15px 30px; 
+    font: 16px "Liberation Sans", sans-serif;
+    cursor: pointer;
+  }
+  
+  /* Media Query for Contact Form */
+  @media (max-width: 991px) {
+    .contact-title {
+      font-size: 30px; 
+    }
+  
+    .contact-intro {
+      margin-top: 15px; 
+    }
+  
+    .contact-label {
+      white-space: initial;
+      padding: 15px; 
+    }
+  
+    .contact-submit {
+      white-space: initial;
+      padding: 15px 20px; 
+    }
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
