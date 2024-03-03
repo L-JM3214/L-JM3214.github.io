@@ -270,7 +270,6 @@ nav a:hover {
 }
 
 /*Projects Container*/
-/* Projects Container */
 .page-container {
     display: flex;
     flex-direction: column;
@@ -311,14 +310,11 @@ nav a:hover {
     padding: 45px 68px;
     cursor: pointer;
     transition: transform 0.5s; /* Add a transition for a smooth flip effect */
+    transform-style: preserve-3d; /* Preserve 3D transformations for child elements */
   }
   
   .project-card:hover {
     transform: rotateY(180deg); /* Rotate the card on hover */
-  }
-  
-  .project-card:hover .project-details {
-    transform: rotateY(180deg); /* Rotate the details container on hover */
   }
   
   .project-image {
@@ -328,6 +324,25 @@ nav a:hover {
     width: 100%;
     object-fit: cover;
     object-position: center;
+    backface-visibility: hidden; /* Hide the backface of the image during rotation */
+  }
+  
+  .project-details {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg); /* Initially rotate details container to the back of the card */
+    backface-visibility: hidden; /* Hide the backface during rotation */
+    background-color: #e74c3c; /* Matte red background color */
+    color: #fff; /* Text color on the backside */
+  }
+  
+  .project-details h3,
+  .project-details p {
+    margin: 0;
   }
   
   .project-title,
@@ -365,18 +380,8 @@ nav a:hover {
     padding: 25px 44px;
   }
   
-  /* Projects Details Container - Hidden by default */
-  .project-details {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: rotateY(180deg); /* Initially rotate details container to the back of the card */
-    backface-visibility: hidden; /* Hide the backface to prevent flickering during rotation */
-  }
-  
+
+  /* Media Query for smaller screens */
   @media (max-width: 991px) {
     .projects-header {
       font-size: 40px;
@@ -402,6 +407,7 @@ nav a:hover {
     }
   }
   
+  
 
  /* Contact Form */
 .contact-container {
@@ -424,7 +430,7 @@ nav a:hover {
   }
   
   .contact-intro {
-    color: #666; 
+    color: #f78e8e; 
     margin-top: 20px; 
     width: 100%;
     font: 18px/167% "Poppins", sans-serif;
