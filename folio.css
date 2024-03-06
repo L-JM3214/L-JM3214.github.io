@@ -199,6 +199,48 @@ hr {
     }
 }
 
+/* Social Media Links Styles */
+.social-media-links {
+    display: flex;
+    gap: 20px; /* Adjust the gap between social media icons */
+    justify-content: center;
+    margin-top: 80px; /* Adjust margin as needed */
+  }
+  
+  .social-media-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-media-links img {
+    width: 30px; /* Adjust the width of the social media icons */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
+  
+  .social-media-links img:hover {
+    transform: scale(1.2); /* Add a zoom effect on hover */
+  }
+  
+/* Flex Container Styles */
+.flex-container {
+    display: flex;
+    gap: 3rem; /* Adjust the gap as needed */
+    justify-content: space-between;
+  }
+  
+  /* Individual Image Styles */
+  .flex-container img {
+    /* Add your individual image styles here */
+    /* For example: */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+
 /* Stack icon  */
 .icon-container .icon {
     width: 65px;
@@ -269,7 +311,7 @@ nav a:hover {
     }
 }
 
-/*Projects Container*/
+/* Projects Container */
 .page-container {
     display: flex;
     flex-direction: column;
@@ -348,39 +390,34 @@ nav a:hover {
   .project-title,
   .project-technology {
     position: relative;
-    color: #c6c9d8;
+    color: #010411;
     font-family: Poppins, sans-serif;
     line-height: 214%;
     margin-top: 328px;
   }
   
-  .project-description {
-    position: relative;
-    margin-top: 33px;
-    font: 600 24px/36px Poppins, sans-serif;
-  }
   
   .view-details,
   .view-more {
     position: relative;
     border-radius: 4px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(10, 0, 0, 0.3);
     margin-top: 45px;
     white-space: nowrap;
     text-transform: uppercase;
     letter-spacing: 0.2px;
     line-height: 243%;
     padding: 15px 26px;
+    background-color: #830f0281;
   }
   
   .view-more {
-    border: 2px solid #f9004d;
-    background-color: #f9004d;
-    color: #fff;
+    border: 2px solid #29010e;
+    background-color: #a10436dc;
+    color: #130505;
     padding: 25px 44px;
   }
   
-
   /* Media Query for smaller screens */
   @media (max-width: 991px) {
     .projects-header {
@@ -407,10 +444,8 @@ nav a:hover {
     }
   }
   
-  
-
- /* Contact Form */
-.contact-container {
+  /* Contact Form */
+  .contact-container {
     display: flex;
     max-width: 400px;
     flex-direction: column;
@@ -419,19 +454,19 @@ nav a:hover {
     font-weight: 400;
     padding: 20px;
     margin-top: 50px;
-    background-color: #1a0000; 
-    border-radius: 10px; 
+    background-color: #1a0000;
+    border-radius: 10px;
   }
   
   .contact-title {
-    color: #f1f0f0; 
+    color: #f1f0f0;
     width: 100%;
-    font: 700 40px/141% "Poppins", sans-serif; 
+    font: 700 40px/141% "Poppins", sans-serif;
   }
   
   .contact-intro {
-    color: #f78e8e; 
-    margin-top: 20px; 
+    color: #f78e8e;
+    margin-top: 20px;
     width: 100%;
     font: 18px/167% "Poppins", sans-serif;
   }
@@ -439,8 +474,8 @@ nav a:hover {
   .contact-label {
     font-family: "Liberation Sans", sans-serif;
     margin-top: 20px;
-    padding: 15px; 
-    border: 2px solid #e6dbdb; 
+    padding: 15px;
+    border: 2px solid #e6dbdb;
     border-radius: 5px;
     background-color: #1a0000;
   }
@@ -452,12 +487,12 @@ nav a:hover {
     border: 2px solid #f9004d;
     background-color: #f9004d;
     align-self: start;
-    margin-top: 20px; 
+    margin-top: 20px;
     color: #e6e0e0;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 15px 30px; 
+    padding: 15px 30px;
     font: 16px "Liberation Sans", sans-serif;
     cursor: pointer;
   }
@@ -465,7 +500,8 @@ nav a:hover {
   /* Media Query for Contact Form */
   @media (max-width: 991px) {
     .contact-title {
-      font-size: 30px; 
+      font-size
+  
     }
   
     .contact-intro {
